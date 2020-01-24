@@ -1,6 +1,5 @@
 package com.day3;
 
-import java.util.Arrays;
 
 public class day3discussion {
     public static void main(String[] args) {
@@ -36,9 +35,10 @@ public class day3discussion {
             System.out.println(p);
         }
 */
-        String a[] = { "hello "};
+        String a[] = {"hello "};
         day3discussion calculation = new day3discussion();
         calculation.stringArrayHandling(a);
+
 
     }
     // Create an array of n integer element and find the sum, average, min and max
@@ -89,12 +89,41 @@ public class day3discussion {
         str[8] = "Walterwhite";
         str[9] = "Joe";
 
-        for (int i =0; i < str.length; i++) {
+        for (int i = 0; i < str.length; i++) {
             System.out.println(str[i]);
         }
+
+        day3discussion obj2 = new day3discussion();
+
+        for (int i = 0; i < str.length; i++) {
+            System.out.print(str[i] + " <-----> ");
+            obj2.reverseString(str[i]);
+        }
+
     }
 
-    public void reverseString
+    public void reverseString(String rev) {
+        String result = "";
+        for (int i = rev.length() - 1; i >= 0; i--) {
+            result = result + rev.charAt(i);
+        }
+        System.out.println(result);
+    }
+
+    public void weirdReverse(String weird) {
+        String result2 = "";
+        int index = 0;
+        int i =0;
+        if (weird.length() % 2 == 0){
+            for(i= weird.length()-1; i>=0; i--){
+                result2 = result2 +
+            }
+        }
+
+
+
+    }
+
 }
 
 
