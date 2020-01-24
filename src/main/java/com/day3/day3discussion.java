@@ -35,10 +35,11 @@ public class day3discussion {
             System.out.println(p);
         }
 */
-        String a[] = {"hello "};
+        String a[] = {"hello"};
+        String b = "Hi";
         day3discussion calculation = new day3discussion();
+        //calculation.stringArrayHandling(a);
         calculation.stringArrayHandling(a);
-
 
     }
     // Create an array of n integer element and find the sum, average, min and max
@@ -73,31 +74,30 @@ public class day3discussion {
         for (int i = arr.length - 1; i >= 0; i--) {
             System.out.print(arr[i]);
         }
-
     }
 
     public void stringArrayHandling(String[] str) {
         str = new String[10];
-        str[0] = "Abhishek";
-        str[1] = "Prakash";
-        str[2] = "Pritesh";
-        str[3] = "Canada";
-        str[4] = "Toronto";
-        str[5] = "Ronaldo";
-        str[6] = "Messi";
-        str[7] = "Sanchez";
-        str[8] = "Walterwhite";
-        str[9] = "Joe";
+        str[0] = "Canada";
+        str[1] = "India";
+        str[2] = "Nepal";
+        str[3] = "Toronto";
+        str[4] = "New York";
+        str[5] = "PATEL";
+        str[6] = "Ramandeep Singh";
+        str[7] = "Inshant";
+        str[8] = "Scarborough";
+        str[9] = "North York";
 
-        for (int i = 0; i < str.length; i++) {
+       /* for (int i = 0; i < str.length; i++) {
             System.out.println(str[i]);
-        }
+        } */
 
         day3discussion obj2 = new day3discussion();
 
         for (int i = 0; i < str.length; i++) {
             System.out.print(str[i] + " <--> ");
-            obj2.reverseString(str[i]);
+   //         obj2.reverseString(str[i]);
             obj2.weirdReverse(str[i]);
         }
 
@@ -113,21 +113,15 @@ public class day3discussion {
 
     public void weirdReverse(String weird) {
         String result2 = "";
-        int index = 0;
-        int i =0;
+        String result3 = "";
 
-            for(i= weird.length()-1; i>=weird.length()/2; i--){
-                if (i % 2 == 0) {
-                    result2 = result2 + weird.charAt(i);
+            for(int i= 0 ; i < weird.length() ; i+=4){
+                if (weird.length() % 2 == 0 && i % 2 != 0) {
+                    result2 = result2 + weird.charAt(i) + weird.charAt(i+1);
                 }
             }
-            System.out.println(result2);
-
-
-
-
+            System.out.println(reverseString(result2));
     }
-
 }
 
 
