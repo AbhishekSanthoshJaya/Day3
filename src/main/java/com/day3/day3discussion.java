@@ -96,8 +96,9 @@ public class day3discussion {
         day3discussion obj2 = new day3discussion();
 
         for (int i = 0; i < str.length; i++) {
-            System.out.print(str[i] + " <-----> ");
+            System.out.print(str[i] + " <--> ");
             obj2.reverseString(str[i]);
+            obj2.weirdReverse(str[i]);
         }
 
     }
@@ -107,18 +108,21 @@ public class day3discussion {
         for (int i = rev.length() - 1; i >= 0; i--) {
             result = result + rev.charAt(i);
         }
-        System.out.println(result);
+        System.out.print(result + " <--> ");
     }
 
     public void weirdReverse(String weird) {
         String result2 = "";
         int index = 0;
         int i =0;
-        if (weird.length() % 2 == 0){
-            for(i= weird.length()-1; i>=0; i--){
-                result2 = result2 +
+
+            for(i= weird.length()-1; i>=weird.length()/2; i--){
+                if (i % 2 == 0) {
+                    result2 = result2 + weird.charAt(i);
+                }
             }
-        }
+            System.out.println(result2);
+
 
 
 
