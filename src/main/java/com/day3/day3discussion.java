@@ -118,9 +118,10 @@ public class day3discussion {
             for(int i= 0 ; i < weird.length() ; i+=4){
                 if (weird.length() % 2 == 0 && i % 2 != 0) {
                     result2 = result2 + weird.charAt(i) + weird.charAt(i+1);
+                    result3 = reverseString(result2);
                 }
             }
-            System.out.println(reverseString(result2));
+            System.out.println(result3));
     }
 }
 
